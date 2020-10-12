@@ -1,2 +1,2 @@
 # Global Round 11
-[Link to problems](https://codeforces.com/contest/1427)
+[Contest link](https://codeforces.com/contest/1427)
