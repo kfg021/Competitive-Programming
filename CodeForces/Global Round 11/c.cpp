@@ -1,6 +1,7 @@
 /*
-I didn't actually manage to solve this one during the contest. The basic
-idea is to do a dp with some optimizations. 
+I didn't actually manage to solve this one during the contest.
+
+The basic idea is to do a dp with some optimizations. 
 Our state is dp[i] = the max number of celebrities we can get assuming we take celebrity i. 
 In the normal case this would be O(n^2). However, for each node, we only 
 need to check the 2r most recent nodes. This is because the largest possible 

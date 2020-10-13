@@ -2,7 +2,7 @@
 My solution for this problem is very implementation heavy and has a lot of case work,
 so I will gloss over some of the details. Basically the idea is use each operation to place
 one element in its correct relative position. Since there are n elements in the array,
-this will require at most n-1 steps (since the first element doesnt need to be moved). 
+this will require at most n-1 steps (since the first element doesn't need to be moved). 
 After this is done, the array will be sorted, but possibly in reverse order.
 In that case, we will use our leftover operation to flip the array.
 */

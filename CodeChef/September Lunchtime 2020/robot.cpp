@@ -3,8 +3,8 @@ This is a constructive problem, so there are obviously many different
 appraches. My approach works by always ensuring that the robot lands
 directly above the obstacle. The first sequence of moves moves the robot
 to a location above the obstacle, but one column to the right. We then move the robot 
-it right one unit, and move it down far enough such that it hits the
-obstacle and gets stuck.
+right one unit, and move it down far enough such that it hits the obstacle and gets
+stuck.
 */
 
 #include <bits/stdc++.h>

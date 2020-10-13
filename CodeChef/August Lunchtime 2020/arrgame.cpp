@@ -1,5 +1,5 @@
 /*
-Lets consider the contigous reigons of 0's in the array. It is optimal
+Let's consider the contigous reigons of 0's in the array. It is optimal
 for the first player to make their first move in the center of the greatest
 size reigon. If the this region has even length, player 1 will lose. If it is odd,
 it depends on the size of the next largest reigon (if there is only one reigon,

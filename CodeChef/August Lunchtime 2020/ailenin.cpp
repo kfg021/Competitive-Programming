@@ -1,5 +1,5 @@
 /*
-We can determine whether we can kill all enimes given a specific cooldown time t.
+We can determine whether we can kill all enimies given a specific cooldown time t.
 Sort the ships by arrival time, and shoot them down one by one. If d seconds elapses
 from when we first see a ship, the answer will be false. Otherwise, it will be true.
 Using the above function, we can binary search the answer. We will return once we get

@@ -1,5 +1,6 @@
 /*
 (Works for both versions of the problem).
+
 We will solve the problem with a construction.
 We will take the largest n/2 elements (rounded up) and use them to
 surround the rest of the elements. If n is even there are duplicates,

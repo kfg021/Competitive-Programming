@@ -3,10 +3,10 @@ During the contest, I only managed to solve subtask 1, where m = n-1.
 This solution, however, works for both subtasks.
 
 Let's first count the number of possible trees. We can store a frequency
-array which counts the number of times we see each distance. Notice that
+array that counts the number of times we see each distance. Notice that
 all nodes a distance l away from the root must be connected to a exactly one
 node that is l-1 away. This is in order to satisfy the uniquness constraint
-in the problem. We can determine the number of possible connections between a node
+in the problem. We can determine the number of possible connections between nodes
 of distance l and distance l-1 with the formula freq[l-1] ^ freq[l], where freq is
 the freqency array. We multiply all of these together to get the total number of
 trees. Notice that if freq[l] is ever 0, our total answer will be 0. 

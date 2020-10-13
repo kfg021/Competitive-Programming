@@ -1,6 +1,6 @@
 /*
 For any a, the number of b's such that a*b < n is floor((n-1)/a).
-We dont need to worry about c because it is uniquely determined by our
+We don't need to worry about c because it is uniquely determined by our
 choices of a and b. We can iterate over all possible a's from 1 to n to
 find our answer.
 */
