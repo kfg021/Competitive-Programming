@@ -1,2 +1,2 @@
-# September Lunchtime 2020
+# CodeChef September Lunchtime 2020
 [Contest link](https://www.codechef.com/LTIME88A/)

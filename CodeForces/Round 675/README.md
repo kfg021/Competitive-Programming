@@ -1,2 +1,2 @@
-# Round 675
+# CodeForces Round 675
 [Contest link](https://codeforces.com/contest/1422)

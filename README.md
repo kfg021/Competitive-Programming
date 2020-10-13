@@ -5,3 +5,6 @@ This is a repository where I will upload solutions to programming contests I par
 * [CodeForces](https://codeforces.com/profile/kfg021)
 * [CodeChef](https://www.codechef.com/users/kfg021)
 * [AtCoder](https://atcoder.jp/users/kfg021)
+* Google competitions:
+    * Kennang (current account)
+    * kennang (account from high school)
