@@ -4,7 +4,7 @@ idea is to do a dp with some optimizations.
 Our state is dp[i] = the max number of celebrities we can get assuming we take celebrity i. 
 In the normal case this would be O(n^2). However, for each node, we only 
 need to check the 2r most recent nodes. This is because the largest possible 
-manhattan distance between two nodes is 2r-1. Any celebrity more with a
+manhattan distance between two nodes is 2r. Any celebrity more with a
 greater time differential than this can certianly be reached. We can consider 
 them all at once by using an array mx, where mx[i] = max(dp[0], ... ,dp[i]).
 */
