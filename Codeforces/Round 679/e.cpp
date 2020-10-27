@@ -17,10 +17,6 @@ The max health for the nth health decrease can be represented as
     a*n - b*d * n*(n-1)/2 .
 Given this formula, we can do a ternary search on the range (1, c) to find the
 maximum possible answer.
-
-Be very careful with overflow. When calculating the difference between two
-function values, the intermediate results might not always fit in 64-bit
-integers.
 */
 
 #include <bits/stdc++.h> 
@@ -29,16 +25,8 @@ using ll = long long;
 
 ll a, b, c, d;
 
-ll nc2(ll n){
-    return (n*(n-1))/2;
-}
-
 ll value(ll n){ 
-    return a*n - b*d*nc2(n);
-}
-
-ll diff(ll n){
-    return a - b*d*(nc2(n) - nc2(n-1));
+    return a*n - b*d*(n*(n-1))/2;
 }
 
 void solve(){
@@ -49,10 +37,11 @@ void solve(){
     }
     else{
         ll lo = 1;
-        ll hi = c;
+        ll hi = (c+d-1)/d;
         while(lo < hi) {
             ll mid = (hi+lo)/2;
-            if(diff(mid+1) <= 0) {
+            ll diff = value(mid+1) - value(mid);
+            if(diff <= 0) {
                 hi = mid;
             }
             else {
