@@ -1,17 +1,12 @@
 /*
 First find the number of inversions in the original array (can be done
-with a Binary Indexed Tree / Fenwick Tree).
-
-Let's consider the sequences in reverse order (k = n-1 -> k = 0).
-
-To transition from k to k-1, we move an element from the end of the array
-to the front. Let x be the element that we are moving. Moving x to the
-front will gain us x inversions because it is moved in front of the smaller
-elements (0, 1, ..., x-1). We will lose n-1 - x inversions because x is no
-longer behind the greater elements (x+1, x+2, ..., n-1).
-
-Starting from the original array, we can get the answer for each value of k
-using this method.
+with a Binary Indexed Tree / Fenwick Tree). This will answer k=0.
+ 
+To transition from k to k+1, we move an element from the front of the array
+to the back. Let x be the element that we are moving. Moving x to the
+end will lose us x inversions because it is no longer in front of of the smaller
+elements (0, 1, ..., x-1). We will gain n-1 - x inversions because x is moved behind
+the greater elements (x+1, x+2, ..., n-1).
 */
 
 #include <bits/stdc++.h> 
@@ -66,24 +61,19 @@ void solve(){
         cin >> a[i];
     }
 
-    vector<ll> ans(n, -1);
-    ans[0] = 0;
+    ll inversions = 0;
     BIT b(vector<int>(n, 0));
     for(int i = n-1; i >= 0; --i){
-        ans[0] += b.query(a[i]-1);
+        inversions += b.query(a[i]-1);
         b.update(a[i], 1);
     }
+    cout << inversions << "\n";
 
     for(int k = 1; k < n; ++k){
-        int move = a[(n-1 + n - (k-1)) % n];
-
-        ans[(n-k)%n] = ans[(n - (k-1)) % n];
-        ans[(n-k)%n] += move;
-        ans[(n-k)%n] -= n-1 - move;
-    }
-
-    for(ll i : ans){
-        cout << i << "\n";
+        int move = a[k-1];
+        inversions -= move;
+        inversions += n-1 - move;
+        cout << inversions << "\n";
     }
 }
 
