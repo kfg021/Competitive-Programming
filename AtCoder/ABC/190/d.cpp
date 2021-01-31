@@ -4,7 +4,7 @@ value a. Let x be the minimum number in this sqeuence. It then holds that
 x + (x+1) + (x+2) + ... + (x+a-1) = n
 
 We can simplify this as
-ax + a(a-1) = n
+ax + a(a-1)/2 = n
 
 Rearranging to get
 2n = a(2x + a - 1)
